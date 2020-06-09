@@ -4,9 +4,6 @@ const url = "https://www.channelcrawler.com/eng/results/161106/page:";
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-
-  //await browser.close();
-
   const getProfiles = async (url, page) => {
     let maxPage = 50;
     let channels = [];
