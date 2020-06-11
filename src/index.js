@@ -33,7 +33,7 @@ const url = "https://www.channelcrawler.com/eng/results/161106/page:";
 
   const list = await getProfiles(url, page);
 
-  await fs.writeFile(`./channels.json`, JSON.stringify(list, null, 2));
+  await fs.writeFile(`./data/channels.json`, JSON.stringify(list, null, 2));
   console.log(`saved ${list.length} channels`);
   await browser.close();
 })();
